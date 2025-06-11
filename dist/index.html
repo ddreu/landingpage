@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8" />
@@ -12,20 +12,26 @@
 
 <body class="bg-white text-gray-800 dark:bg-[#0f0f0f] dark:text-white">
     <!-- Header -->
-    <header class="sticky top-0 z-50 backdrop-blur-md bg-white/40 dark:bg-[#0f0f0f]/40">
+    <header class="sticky top-0 z-50 backdrop-blur-sm bg-white/40 dark:bg-[#0f0f0f]/40">
         <div class="flex justify-between items-center max-w-7xl mx-auto px-8 py-6">
-            <div class="flex items-center gap-2 text-xl font-bold text-black dark:text-white">
-                <span class="material-icons-outlined text-3xl text-emerald-400">fitness_center</span>
-                Fitness Pro
-            </div>
+            <a href="index.html">
+                <div class="flex items-center gap-2 text-xl font-bold text-black dark:text-white cursor-pointer">
+                    <span class="material-icons-outlined text-3xl text-orange-500">fitness_center</span>
+                    Fitness Pro
+                </div>
+            </a>
+
 
 
             <nav class="space-x-6 hidden md:flex">
-                <a href="#" class="text-black dark:text-gray-300 hover:text-orange-500">How it works</a>
-                <a href="#" class="text-black dark:text-gray-300 hover:text-orange-500">Features</a>
-                <a href="#" class="text-black dark:text-gray-300 hover:text-orange-500">FAQs</a>
-                <a href="#" class="text-black dark:text-gray-300 hover:text-orange-500">Download</a>
+                <a href="#next-section" class="text-black dark:text-gray-300 hover:text-orange-500">How it Works</a>
+                <a href="#features" class="text-black dark:text-gray-300 hover:text-orange-500">Features</a>
+                <a href="#pricing" class="text-black dark:text-gray-300 hover:text-orange-500">Plans</a>
+                <a href="#faq" class="text-black dark:text-gray-300 hover:text-orange-500">FAQs</a>
+                <a href="#blog" class="text-black dark:text-gray-300 hover:text-orange-500">Blog</a>
+                <a href="#contact" class="text-black dark:text-gray-300 hover:text-orange-500">Contact</a>
             </nav>
+
 
             <div class="flex items-center gap-3">
                 <span class="text-black dark:text-gray-300 flex items-center gap-1">
@@ -45,65 +51,80 @@
     </header>
 
 
-
     <!-- Hero Section -->
-    <section class="flex flex-col md:flex-row items-center justify-between mt-12 px-8 py-16 max-w-7xl mx-auto">
+    <section id="hero"
+        class="relative flex flex-col md:flex-row items-center justify-between px-8 py-16 max-w-7xl mx-auto">
         <!-- Text -->
-        <div class="md:w-1/2 space-y-6">
-            <p class="uppercase text-sm tracking-widest text-orange-500">Train Smarter. Get Stronger</p>
-            <h1 class="text-4xl md:text-5xl font-bold leading-tight">
+        <div class="md:w-1/2 space-y-6 -mt-16 hero-fade-group">
+            <p class="uppercase text-sm tracking-widest text-orange-500 hero-fade">Train Smarter. Get Stronger</p>
+            <h1 class="text-4xl md:text-5xl font-bold leading-tight hero-fade">
                 Simple fitness<br />
                 experience for<br />
                 everyone.
             </h1>
-            <p class="text-gray-400">
+            <p class="text-gray-400 hero-fade">
                 Track your workouts, get better results, and be the best version of you. Less thinking, more lifting.
             </p>
-            <div class="flex space-x-4">
-                <button class="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold">
+
+            <!-- Buttons -->
+            <div class="flex space-x-4 hero-fade">
+                <button class="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-full font-semibold">
                     Download App
                 </button>
                 <button
-                    class="border border-gray-400 dark:border-gray-500 hover:border-black dark:hover:border-white text-black dark:text-white px-6 py-3 rounded-lg font-semibold transition-colors">
+                    class="border border-gray-400 dark:border-gray-500 hover:border-black dark:hover:border-white text-black dark:text-white px-6 py-3 rounded-full font-semibold transition-colors">
                     Book a Class
                 </button>
-
             </div>
         </div>
 
         <!-- Image -->
-        <div class="md:w-1/2 mt-12 md:mt-0 flex justify-center">
-            <img src="aa088efa-e99f-4530-abd0-59525cbd07e7.png" alt="Fitness Image" class="w-80 md:w-[400px]" />
+        <div class="md:w-1/2 ms-16 mt-12 md:mt-0 flex justify-center hero-image">
+            <img src="assets/images/hero.png" alt="Fitness Image" class="w-80 md:w-[550px]" />
         </div>
+
+        <!-- Scroll-down Button (fixed in layout) -->
+        <div id="scroll-down-btn"
+            class="absolute bottom-12 left-1/2 transform -translate-x-1/2 hidden md:flex animate-bounce z-10">
+            <button onclick="document.getElementById('next-section').scrollIntoView({ behavior: 'smooth' });"
+                class="w-14 h-14 border-2 border-gray-400 dark:border-gray-600 rounded-full flex items-center justify-center text-gray-600 dark:text-gray-300 hover:text-orange-500 hover:border-orange-500 transition duration-300">
+                <span class="material-icons-outlined text-2xl">expand_more</span>
+            </button>
+        </div>
+
     </section>
+
+
 
     <!-- <section class="px-8 py-20 max-w-7xl mx-auto"> -->
-    <section class="px-8 py-20 max-w-7xl mx-auto -mt-10">
-
-        <p class="text-center text-sm text-gray-600 dark:text-gray-400 mb-10">
-            We work with people from over the world
+    <section id="next-section" class="px-8 py-32 max-w-7xl mx-auto -mt-8">
+        <p class="text-center text-base md:text-lg text-gray-600 dark:text-gray-400 mb-14 next-fade">
+            Trusted by athletes, coaches, and health brands worldwide
         </p>
 
-        <div class="flex flex-wrap justify-center gap-8 text-gray-500 dark:text-gray-300 text-sm">
-            <span class="flex items-center gap-2">
-                <span class="material-icons-outlined text-lg text-emerald-400">waves</span> waves
+        <div class="flex flex-wrap justify-center gap-20 text-gray-500 dark:text-gray-300 text-base md:text-lg">
+            <span class="flex items-center gap-3 next-icon">
+                <span class="material-icons-outlined text-2xl text-orange-400">fitness_center</span> FlexCore
             </span>
-            <span class="flex items-center gap-2">
-                <span class="material-icons-outlined text-lg text-red-400">movie</span> RealShow
+            <span class="flex items-center gap-3 next-icon">
+                <span class="material-icons-outlined text-2xl text-red-400">favorite</span> HeartLab
             </span>
-            <span class="flex items-center gap-2">
-                <span class="material-icons-outlined text-lg text-cyan-400">public</span> travelers.
+            <span class="flex items-center gap-3 next-icon">
+                <span class="material-icons-outlined text-2xl text-orange-300">public</span> ActiveWorld
             </span>
-            <span class="flex items-center gap-2">
-                <span class="material-icons-outlined text-lg text-yellow-400">link</span> goldlines
+            <span class="flex items-center gap-3 next-icon">
+                <span class="material-icons-outlined text-2xl text-yellow-400">track_changes</span> GoldTrack
             </span>
         </div>
     </section>
 
-    <section class="px-8 py-20 max-w-7xl mx-auto">
+
+
+
+    <section class="px-8 py-20 max-w-7xl mx-auto -mt-16">
         <div class="flex flex-col md:flex-row items-center justify-between gap-12">
             <!-- Text -->
-            <div class="md:w-1/2 space-y-6 text-center md:text-left">
+            <div class="md:w-1/2 space-y-6 text-center md:text-left -mt-16 text-block">
                 <h2 class="text-3xl md:text-4xl font-bold">Train smarter,<br /> get stronger.</h2>
                 <p class="text-gray-500 dark:text-gray-400">
                     Fitness Pro helps track your workouts, get better results, and be the best version of you.
@@ -112,329 +133,406 @@
             </div>
 
             <!-- Image -->
-            <div class="md:w-1/2 flex justify-center">
-                <img src="5dde3583-300d-46bc-ac4d-9f71d4558bb0.png" alt="Workout Illustration"
-                    class="w-72 md:w-[340px]" />
+            <div class="md:w-1/2 flex justify-center image-block">
+                <img src="assets/images/31.png" alt="Workout Illustration" class="w-72 md:w-[500px]" />
             </div>
         </div>
     </section>
 
-
-    <section class="px-8 py-20 max-w-3xl mx-auto text-center">
-        <h2 class="text-3xl md:text-4xl font-extrabold mb-4">
-            Knight offers everything<br /> you need.
+    <!-- Features Title Section -->
+    <section id="features" class="px-8 py-20 max-w-3xl mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl font-extrabold mb-4 features-title">
+            Fitness Pro has everything<br /> you need to train better.
         </h2>
-        <p class="text-gray-600 dark:text-gray-400 text-lg">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br />
-            Vestibulum in nisi commodo, tempus odio a, vestibulum nibh.
+        <p class="text-gray-600 dark:text-gray-400 text-lg features-subtext">
+            Monitor workouts, heart rate, sleep, and recovery all in one place.<br />
+            Built for those who want real results, not just data.
         </p>
     </section>
 
-    <section class="px-8 py-24 max-w-7xl mx-auto">
+    <!-- Feature Grid Section -->
+    <section class="px-8 py-24 max-w-7xl mx-auto -mt-16">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-16 text-center">
+
             <!-- Feature 1 -->
-            <div class="space-y-4">
+            <div class="space-y-4 feature-item">
                 <div
                     class="mx-auto w-16 h-16 rounded-full bg-emerald-100 dark:bg-emerald-900 flex items-center justify-center">
                     <span class="material-icons-outlined text-emerald-600 dark:text-emerald-400 text-3xl">share</span>
                 </div>
-                <h3 class="text-xl font-bold text-black dark:text-white">Create once. Share everywhere.</h3>
-                <p class="text-gray-600 dark:text-gray-400">Lorem ipsum dolor sit amet...</p>
+                <h3 class="text-xl font-bold text-black dark:text-white">Track and sync instantly</h3>
+                <p class="text-gray-600 dark:text-gray-400">
+                    Automatically sync your workouts, steps, and heart rate across all devices in real-time.
+                </p>
             </div>
 
             <!-- Feature 2 -->
-            <div class="space-y-4">
+            <div class="space-y-4 feature-item">
                 <div
                     class="mx-auto w-16 h-16 rounded-full bg-emerald-100 dark:bg-emerald-900 flex items-center justify-center">
                     <span class="material-icons-outlined text-emerald-600 dark:text-emerald-400 text-3xl">devices</span>
                 </div>
-                <h3 class="text-xl font-bold text-black dark:text-white">Unlimited devices</h3>
-                <p class="text-gray-600 dark:text-gray-400">Lorem ipsum dolor sit amet...</p>
+                <h3 class="text-xl font-bold text-black dark:text-white">Seamless multi-device access</h3>
+                <p class="text-gray-600 dark:text-gray-400">
+                    Access your fitness data from your smartwatch, mobile, or desktop — anytime, anywhere.
+                </p>
             </div>
 
             <!-- Feature 3 -->
-            <div class="space-y-4">
+            <div class="space-y-4 feature-item">
                 <div class="mx-auto w-16 h-16 rounded-full bg-red-100 dark:bg-red-900 flex items-center justify-center">
-                    <span class="material-icons-outlined text-red-600 dark:text-red-400 text-3xl">view_quilt</span>
+                    <span class="material-icons-outlined text-orange-400 dark:text-red-300 text-3xl">view_quilt</span>
                 </div>
-                <h3 class="text-xl font-bold text-black dark:text-white">Beautiful templates & layouts</h3>
-                <p class="text-gray-600 dark:text-gray-400">Lorem ipsum dolor sit amet...</p>
+                <h3 class="text-xl font-bold text-black dark:text-white">Intuitive dashboard</h3>
+                <p class="text-gray-600 dark:text-gray-400">
+                    View progress, analyze stats, and customize your goals — all in a clean and easy-to-use layout.
+                </p>
             </div>
 
             <!-- Feature 4 -->
-            <div class="space-y-4">
+            <div class="space-y-4 feature-item">
                 <div
                     class="mx-auto w-16 h-16 rounded-full bg-cyan-100 dark:bg-cyan-900 flex items-center justify-center">
                     <span class="material-icons-outlined text-cyan-600 dark:text-cyan-400 text-3xl">public</span>
                 </div>
-                <h3 class="text-xl font-bold text-black dark:text-white">Available globally</h3>
-                <p class="text-gray-600 dark:text-gray-400">Lorem ipsum dolor sit amet...</p>
+                <h3 class="text-xl font-bold text-black dark:text-white">Global fitness community</h3>
+                <p class="text-gray-600 dark:text-gray-400">
+                    Connect with other users, join challenges, and stay motivated with support from around the world.
+                </p>
             </div>
 
         </div>
     </section>
 
-    </section>
+
+    <!-- </section> -->
     <section class="px-8 py-24 max-w-7xl mx-auto flex flex-col-reverse md:flex-row items-center mb-16 gap-12">
         <!-- Left Content -->
-        <div class="md:w-1/2 space-y-6 text-center md:text-left">
+        <div class="md:w-1/2 space-y-6 text-center md:text-left reveal-text">
             <h2 class="text-3xl md:text-4xl font-extrabold leading-tight">
-                Knight is more than just a<br class="hidden md:inline" /> page builder.
+                <span class="block">Fitness Pro is more than just</span>
+                <span class="block">a fitness platform.</span>
             </h2>
             <p class="text-gray-600 dark:text-gray-400 text-lg">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis pulvinar vestibulum.
-                Donec eleifend, sem sed dictum mattis, turpis purus placerat eros.
+                We bring together smart tracking, expert coaching, and a global community — all designed to support
+                every step of your fitness journey.
             </p>
             <button
-                class="bg-black text-white dark:bg-white dark:text-black px-6 py-3 rounded-md shadow-md font-semibold hover:bg-gray-900 dark:hover:bg-gray-100 transition">
-                TRY THE LIVE DEMO
+                class="bg-black text-white dark:bg-white dark:text-black px-6 py-3 rounded-md shadow-md font-semibold hover:bg-gray-900 dark:hover:bg-gray-100 transition reveal-button">
+                JOIN OUR COMMUNITY
             </button>
-
         </div>
 
         <!-- Right Image -->
-        <div class="md:w-1/2 relative">
-            <img src="df3ae40c-9f96-4dac-8fa6-f4ceedfa54d8.png" alt="Showcase Image"
+        <div class="md:w-1/2 relative reveal-image">
+            <img src="df3ae40c-9f96-4dac-8fa6-f4ceedfa54d8.png" alt="Fitness Pro Showcase"
                 class="w-full rounded-lg shadow-lg object-cover" />
-
-            <!-- Dots Navigation (Static) -->
             <div class="absolute top-4 right-4 flex space-x-2">
-                <span class="w-3 h-3 bg-emerald-400 rounded-full"></span>
-                <span class="w-3 h-3 bg-emerald-700 rounded-full opacity-60"></span>
-                <span class="w-3 h-3 bg-emerald-700 rounded-full opacity-60"></span>
+                <span class="w-3 h-3 bg-orange-400 rounded-full"></span>
+                <span class="w-3 h-3 bg-orange-700 rounded-full opacity-60"></span>
+                <span class="w-3 h-3 bg-orange-700 rounded-full opacity-60"></span>
             </div>
         </div>
     </section>
-    <section class="relative bg-[#0d1b1e] text-white px-8 py-32 overflow-hidden"
+
+
+    <section id="pricing" class="relative bg-gray-50 dark:bg-neutral-900 text-gray-900 dark:text-white px-8 py-32"
         style="clip-path: polygon(0 6%, 100% 0%, 100% 94%, 0% 100%)">
-        <!-- Tilted background wrapper -->
-        <!-- <div class="transform -skew-y-3 bg-[#0d1b1e]"> -->
-        <!-- Counter-skewed content -->
-        <!-- <div class="transform skew-y-3 text-white py-24 px-8"> -->
+
         <!-- Section Title -->
-        <div class="max-w-7xl mx-auto text-center mb-16">
-            <h2 class="text-3xl md:text-4xl font-extrabold mb-4">Choose your pricing plan.</h2>
-            <p class="text-gray-400 text-lg">Simple pricing – 7 Days free trial</p>
+        <div class="max-w-7xl mx-auto text-center mb-16 pricing-title">
+            <h2 class="text-3xl md:text-4xl font-extrabold mb-4">Choose the plan that fits your goals</h2>
+            <p class="text-gray-600 dark:text-gray-400 text-lg">Transparent pricing with a 7-day free trial</p>
         </div>
 
         <!-- Pricing Cards -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto mb-16">
             <!-- Personal -->
-            <div class="bg-[#1b2a2d] rounded-lg p-8 text-center shadow-md">
+            <div
+                class="bg-white dark:bg-[#2c2c2c] text-gray-800 dark:text-white rounded-lg p-8 text-center shadow-md pricing-card">
                 <h3 class="text-xl font-semibold mb-2">Personal</h3>
-                <p class="text-3xl font-bold text-emerald-400 mb-1">$59</p>
-                <p class="text-sm text-gray-400 mb-6">per month</p>
-                <ul class="space-y-2 text-gray-300 mb-6">
+                <p class="text-3xl font-bold text-orange-400 mb-1">$59</p>
+                <p class="text-sm text-gray-500 dark:text-gray-400 mb-6">per month</p>
+                <ul class="space-y-2 text-gray-600 dark:text-gray-300 mb-6">
                     <li>1 user</li>
-                    <li>10 websites</li>
-                    <li>Access to premium templates</li>
+                    <li>10 workout plans</li>
+                    <li>Custom nutrition tips</li>
                     <li>Basic support</li>
                 </ul>
-                <button
-                    class="bg-emerald-400 text-black px-5 py-2 rounded font-semibold hover:bg-emerald-500 transition">
+                <button class="bg-orange-400 text-black px-5 py-2 rounded font-semibold hover:bg-orange-500 transition">
                     START FREE TRIAL
                 </button>
             </div>
 
-            <!-- Agency -->
-            <div class="bg-[#1b2a2d] rounded-lg p-8 text-center shadow-md">
-                <h3 class="text-xl font-semibold mb-2">Agency</h3>
-                <p class="text-3xl font-bold text-emerald-400 mb-1">$159</p>
-                <p class="text-sm text-gray-400 mb-6">per month</p>
-                <ul class="space-y-2 text-gray-300 mb-6">
-                    <li>2–15 users</li>
-                    <li>50 websites</li>
-                    <li>Access to premium templates</li>
+            <!-- Coach -->
+            <div
+                class="bg-white dark:bg-[#2c2c2c] text-gray-800 dark:text-white rounded-lg p-8 text-center shadow-md pricing-card">
+                <h3 class="text-xl font-semibold mb-2">Coach</h3>
+                <p class="text-3xl font-bold text-orange-400 mb-1">$159</p>
+                <p class="text-sm text-gray-500 dark:text-gray-400 mb-6">per month</p>
+                <ul class="space-y-2 text-gray-600 dark:text-gray-300 mb-6">
+                    <li>Up to 15 clients</li>
+                    <li>Group session scheduling</li>
+                    <li>Access to all templates</li>
                     <li>Priority support</li>
                 </ul>
-                <button
-                    class="bg-emerald-400 text-black px-5 py-2 rounded font-semibold hover:bg-emerald-500 transition">
+                <button class="bg-orange-400 text-black px-5 py-2 rounded font-semibold hover:bg-orange-500 transition">
                     START FREE TRIAL
                 </button>
             </div>
 
-            <!-- Enterprise -->
-            <div class="bg-[#1b2a2d] rounded-lg p-8 text-center shadow-md">
-                <h3 class="text-xl font-semibold mb-2">Enterprise</h3>
-                <p class="text-3xl font-bold text-emerald-400 mb-1">$499</p>
-                <p class="text-sm text-gray-400 mb-6">per month</p>
-                <ul class="space-y-2 text-gray-300 mb-6">
+            <!-- Business -->
+            <div
+                class="bg-white dark:bg-[#2c2c2c] text-gray-800 dark:text-white rounded-lg p-8 text-center shadow-md pricing-card">
+                <h3 class="text-xl font-semibold mb-2">Business</h3>
+                <p class="text-3xl font-bold text-orange-400 mb-1">$499</p>
+                <p class="text-sm text-gray-500 dark:text-gray-400 mb-6">per month</p>
+                <ul class="space-y-2 text-gray-600 dark:text-gray-300 mb-6">
                     <li>Unlimited users</li>
-                    <li>Unlimited websites</li>
-                    <li>Access to premium templates</li>
+                    <li>Unlimited classes and programs</li>
+                    <li>Custom branded portal</li>
                     <li>24/7 support</li>
                 </ul>
-                <button
-                    class="bg-emerald-400 text-black px-5 py-2 rounded font-semibold hover:bg-emerald-500 transition">
+                <button class="bg-orange-400 text-black px-5 py-2 rounded font-semibold hover:bg-orange-500 transition">
                     START FREE TRIAL
                 </button>
             </div>
         </div>
 
-        <!-- Features Section -->
-        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 mb-20">
-            <!-- Left Text -->
+        <!-- Features Overview -->
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 mb-20 pricing-features">
+            <!-- Left Description -->
             <div>
-                <h4 class="text-2xl font-bold text-white mb-4">Everything is covered.</h4>
-                <p class="text-lg text-white leading-relaxed">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in nisi commodo, tempus odio a,
-                    vestibulum nibh.
+                <h4 class="text-2xl font-bold mb-4">What's included in every plan</h4>
+                <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+                    Every subscription includes full access to training tools, performance tracking, and health
+                    integrations.
                 </p>
             </div>
 
-            <!-- Feature Items -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 text-white text-base">
-                <ul class="space-y-4">
+            <!-- Feature List -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 text-base">
+                <ul class="space-y-4 text-gray-700 dark:text-white">
                     <li class="flex items-center gap-3">
-                        <span class="material-icons-outlined text-emerald-400">check_circle</span>
-                        Weekly new templates
+                        <span class="material-icons-outlined text-orange-400">check_circle</span>
+                        Weekly training templates
                     </li>
                     <li class="flex items-center gap-3">
-                        <span class="material-icons-outlined text-emerald-400">mail</span>
-                        MailChimp integration
+                        <span class="material-icons-outlined text-orange-400">mail</span>
+                        Email automation tools
                     </li>
                     <li class="flex items-center gap-3">
-                        <span class="material-icons-outlined text-emerald-400">verified</span>
-                        100% refund guarantee
+                        <span class="material-icons-outlined text-orange-400">verified</span>
+                        Risk-free refund policy
                     </li>
                     <li class="flex items-center gap-3">
-                        <span class="material-icons-outlined text-emerald-400">support_agent</span>
-                        Free unlimited support
+                        <span class="material-icons-outlined text-orange-400">support_agent</span>
+                        Unlimited support access
                     </li>
                 </ul>
-
-                <ul class="space-y-4">
+                <ul class="space-y-4 text-gray-700 dark:text-white">
                     <li class="flex items-center gap-3">
-                        <span class="material-icons-outlined text-emerald-400">new_releases</span>
-                        Access to new features
+                        <span class="material-icons-outlined text-orange-400">new_releases</span>
+                        All new feature access
                     </li>
                     <li class="flex items-center gap-3">
-                        <span class="material-icons-outlined text-emerald-400">credit_card</span>
-                        Stripe integration
+                        <span class="material-icons-outlined text-orange-400">credit_card</span>
+                        Secure Stripe billing
                     </li>
                     <li class="flex items-center gap-3">
-                        <span class="material-icons-outlined text-emerald-400">search</span>
-                        Advanced SEO tools
+                        <span class="material-icons-outlined text-orange-400">search</span>
+                        Built-in SEO optimization
                     </li>
                 </ul>
             </div>
         </div>
 
         <!-- Final CTA -->
-        <div class="text-center mt-20">
-            <h4 class="text-2xl font-bold text-white mb-4">Try Knight free for 7 days</h4>
-            <p class="text-white text-lg mb-8 max-w-2xl mx-auto">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in nisi commodo, tempus odio a,
-                vestibulum nibh.
+        <div class="text-center mt-20 pricing-cta">
+            <h4 class="text-2xl font-bold mb-4">Get started with Fitness Pro</h4>
+            <p class="text-gray-700 dark:text-gray-300 text-lg mb-8 max-w-2xl mx-auto">
+                Join thousands of professionals improving performance and managing fitness smarter. Try it free for 7
+                days.
             </p>
             <button
-                class="bg-emerald-400 text-black px-6 py-3 rounded font-semibold hover:bg-emerald-500 transition shadow-lg">
+                class="bg-orange-400 text-white px-6 py-3 rounded font-semibold hover:bg-orange-500 transition shadow-lg">
                 CREATE YOUR ACCOUNT
             </button>
         </div>
-
-        <!-- </div>
-        </div> -->
     </section>
 
-    <section class=" px-8 py-24 transition-colors duration-300">
-        <div class="max-w-6xl mx-auto text-center mb-16">
+
+    <section id="faq" class="px-8 py-24 transition-colors duration-300">
+        <div class="max-w-6xl mx-auto text-center mb-16 faq-title">
             <h2 class="text-3xl md:text-4xl font-extrabold mb-4">Frequently Asked Questions</h2>
-            <p class="text-gray-600 dark:text-gray-400 text-lg">Answers to common concerns and inquiries.</p>
+            <p class="text-gray-600 dark:text-gray-400 text-lg">
+                Find quick answers to common questions about Fitness Pro.
+            </p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto mb-20">
-            <!-- FAQ Item -->
-            <div>
-                <h4 class="font-semibold text-lg mb-2">Can I try it for free?</h4>
-                <p class="text-gray-600 dark:text-gray-400 text-sm">Yes, we offer a 7-day trial so you can explore all
-                    features without commitment.</p>
+            <!-- Each .faq-item will be animated -->
+            <div class="faq-item">
+                <h4 class="font-semibold text-lg mb-2">Can I try Fitness Pro for free?</h4>
+                <p class="text-gray-600 dark:text-gray-400 text-sm">
+                    Yes. All plans include a 7-day free trial with full access to features.
+                </p>
             </div>
-            <div>
-                <h4 class="font-semibold text-lg mb-2">Do you have hidden fees?</h4>
-                <p class="text-gray-600 dark:text-gray-400 text-sm">No hidden fees. Our pricing is transparent with no
-                    surprises.</p>
+
+            <div class="faq-item">
+                <h4 class="font-semibold text-lg mb-2">Are there any hidden charges?</h4>
+                <p class="text-gray-600 dark:text-gray-400 text-sm">
+                    No hidden fees. We keep our pricing simple, clear, and transparent.
+                </p>
             </div>
-            <div>
-                <h4 class="font-semibold text-lg mb-2">What payment methods do you accept?</h4>
-                <p class="text-gray-600 dark:text-gray-400 text-sm">We accept credit/debit cards, PayPal, and secure
-                    Stripe payments.</p>
+
+            <div class="faq-item">
+                <h4 class="font-semibold text-lg mb-2">Which payment options do you support?</h4>
+                <p class="text-gray-600 dark:text-gray-400 text-sm">
+                    We accept major credit/debit cards, PayPal, and Stripe-secured payments.
+                </p>
             </div>
-            <div>
-                <h4 class="font-semibold text-lg mb-2">How often do you release updates?</h4>
-                <p class="text-gray-600 dark:text-gray-400 text-sm">Updates are rolled out bi-weekly to enhance features
-                    and security.</p>
+
+            <div class="faq-item">
+                <h4 class="font-semibold text-lg mb-2">How often do updates go live?</h4>
+                <p class="text-gray-600 dark:text-gray-400 text-sm">
+                    We release updates every two weeks to improve functionality and security.
+                </p>
             </div>
-            <div>
-                <h4 class="font-semibold text-lg mb-2">What is your refund policy?</h4>
-                <p class="text-gray-600 dark:text-gray-400 text-sm">You’re eligible for a full refund within 14 days of
-                    purchase, no questions asked.</p>
+
+            <div class="faq-item">
+                <h4 class="font-semibold text-lg mb-2">What's the refund policy?</h4>
+                <p class="text-gray-600 dark:text-gray-400 text-sm">
+                    You can cancel anytime and request a full refund within 14 days of purchase.
+                </p>
             </div>
-            <div>
-                <h4 class="font-semibold text-lg mb-2">How can I contact you?</h4>
-                <p class="text-gray-600 dark:text-gray-400 text-sm">Use the form below or email us anytime. We're quick
-                    to respond.</p>
+
+            <div class="faq-item">
+                <h4 class="font-semibold text-lg mb-2">Need help or have questions?</h4>
+                <p class="text-gray-600 dark:text-gray-400 text-sm">
+                    Reach out via our contact form or email. Our support team is ready to assist you.
+                </p>
             </div>
         </div>
 
-        <!-- Call to Action -->
-        <div class="text-center">
-            <h3 class="font-semibold text-xl mb-6">Still have questions?</h3>
+        <div class="text-center faq-cta">
+            <h3 class="font-semibold text-xl mb-6">Still need assistance?</h3>
             <a href="#contact"
-                class="bg-emerald-400 text-black px-6 py-3 rounded font-semibold hover:bg-emerald-500 transition shadow-lg">
+                class="bg-orange-400 text-white px-6 py-3 rounded font-semibold hover:bg-orange-500 transition shadow-lg">
                 CONTACT US
             </a>
         </div>
     </section>
 
 
-    <section id="contact"
-        class="relative bg-gray-100 dark:bg-[#111111] text-gray-900 dark:text-white px-8 py-32 overflow-hidden"
-        style="clip-path: polygon(0 0%, 100% 6%, 100% 100%, 0% 94%)">
-
-        <div class="max-w-3xl mx-auto text-center mb-12">
-            <h2 class="text-3xl md:text-4xl font-extrabold mb-4">Get in Touch</h2>
-            <p class="text-gray-400 text-lg">
-                Have any questions or ideas? Fill out the form and we’ll get back to you shortly.
+    <section id="blog" class="px-8 py-24 mb-16 text-gray-900 dark:text-white">
+        <div class="max-w-6xl mx-auto text-center mb-16 blog-title">
+            <h2 class="text-3xl md:text-4xl font-extrabold mb-4">Latest from Fitness Pro</h2>
+            <p class="text-gray-600 dark:text-gray-400 text-lg">
+                Stay updated with our latest announcements and insights.
             </p>
         </div>
-        <form class="max-w-2xl mx-auto space-y-6">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <input type="text" placeholder="First Name"
-                    class="bg-gray-200 dark:bg-[#1b2a2d] text-gray-800 dark:text-white p-4 rounded w-full focus:outline-none focus:ring-2 focus:ring-emerald-400"
-                    required />
-                <input type="text" placeholder="Last Name"
-                    class="bg-gray-200 dark:bg-[#1b2a2d] text-gray-800 dark:text-white p-4 rounded w-full focus:outline-none focus:ring-2 focus:ring-emerald-400"
-                    required />
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16">
+            <!-- Post 1 -->
+            <div class="bg-white dark:bg-[#1e1e1e] rounded-lg overflow-hidden shadow-md blog-card">
+                <img src="assets/images/blog-apps.jpg" alt="Mobile apps" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="font-semibold text-lg mb-2">New iOS & Android App Launch</h3>
+                    <p class="text-sm text-gray-500 dark:text-gray-400 mb-2">May 20, 2025</p>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">
+                        The Fitness Pro app is now available on all major platforms. Track your fitness on the go.
+                    </p>
+                    <a href="#" class="text-orange-500 font-medium hover:underline">Learn more</a>
+                </div>
             </div>
 
-            <input type="email" placeholder="Your Email"
-                class="bg-gray-200 dark:bg-[#1b2a2d] text-gray-800 dark:text-white p-4 rounded w-full focus:outline-none focus:ring-2 focus:ring-emerald-400"
-                required />
-
-            <textarea rows="5" placeholder="Your Message"
-                class="bg-gray-200 dark:bg-[#1b2a2d] text-gray-800 dark:text-white p-4 rounded w-full focus:outline-none focus:ring-2 focus:ring-emerald-400"
-                required></textarea>
-
-            <div class="text-center">
-                <button type="submit"
-                    class="bg-emerald-400 text-black px-8 py-3 rounded font-semibold hover:bg-emerald-500 transition shadow-lg">
-                    SEND MESSAGE
-                </button>
+            <!-- Post 2 -->
+            <div class="bg-white dark:bg-[#1e1e1e] rounded-lg overflow-hidden shadow-md blog-card">
+                <img src="assets/images/blog-update.jpg" alt="App update" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="font-semibold text-lg mb-2">Dashboard Update Is Live</h3>
+                    <p class="text-sm text-gray-500 dark:text-gray-400 mb-2">April 10, 2025</p>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">
+                        Our redesigned dashboard makes it easier to visualize progress and set new goals.
+                    </p>
+                    <a href="#" class="text-orange-500 font-medium hover:underline">Learn more</a>
+                </div>
             </div>
-        </form>
 
+            <!-- Post 3 -->
+            <div class="bg-white dark:bg-[#1e1e1e] rounded-lg overflow-hidden shadow-md blog-card">
+                <img src="assets/images/blog-story.jpg" alt="Company story" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="font-semibold text-lg mb-2">Behind the Brand: Our Journey</h3>
+                    <p class="text-sm text-gray-500 dark:text-gray-400 mb-2">March 5, 2025</p>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">
+                        Discover how Fitness Pro started and how we're transforming the future of health tech.
+                    </p>
+                    <a href="#" class="text-orange-500 font-medium hover:underline">Learn more</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center blog-cta">
+            <a href="#"
+                class="bg-orange-500 text-white px-6 py-3 rounded-md font-semibold hover:bg-orange-600 shadow-lg transition">
+                View All Posts
+            </a>
+        </div>
     </section>
 
 
 
+    <section id="contact"
+        class="relative bg-gray-200 dark:bg-neutral-900 text-gray-900 dark:text-white px-8 py-32 overflow-hidden"
+        style="clip-path: polygon(0 0%, 100% 6%, 100% 100%, 0% 94%)">
+
+        <div class="max-w-3xl mx-auto text-center mb-12 contact-title">
+            <h2 class="text-3xl md:text-4xl font-extrabold mb-4">Get in Touch</h2>
+            <p class="text-gray-400 text-lg">
+                Have any questions or ideas? Fill out the form and we'll get back to you shortly.
+            </p>
+        </div>
+
+        <form class="max-w-2xl mx-auto space-y-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <input type="text" placeholder="First Name"
+                    class="bg-white dark:bg-[#2c2c2c] text-white p-4 rounded w-full contact-input" required />
+                <input type="text" placeholder="Last Name"
+                    class="bg-white dark:bg-[#2c2c2c] text-white p-4 rounded w-full contact-input" required />
+            </div>
+
+            <input type="email" placeholder="Your Email"
+                class="bg-white dark:bg-[#2c2c2c] text-white p-4 rounded w-full contact-input" required />
+
+            <textarea rows="5" placeholder="Your Message"
+                class="bg-white dark:bg-[#2c2c2c] text-white p-4 rounded w-full contact-input" required></textarea>
+
+            <div class="text-center contact-button">
+                <button type="submit"
+                    class="bg-orange-400 text-white px-8 py-3 rounded font-semibold hover:bg-orange-500 transition shadow-lg">
+                    SEND MESSAGE
+                </button>
+            </div>
+        </form>
+    </section>
+
+
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollTopBtn" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });"
+        class="fixed bottom-6 right-6 z-50 hidden w-12 h-12 rounded-full bg-orange-500 text-white text-2xl flex items-center justify-center shadow-md hover:bg-orange-600 transition">
+        <span class="material-icons-outlined">arrow_upward</span>
+    </button>
+
     <!-- Footer -->
-    <footer class="px-8 py-12 border-t border-gray-200 dark:border-gray-700 mt-16">
+    <footer class="px-8 py-12 border-gray-200 dark:border-gray-700 mt-4">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-8">
             <!-- Left -->
             <div>
                 <div class="flex items-center gap-2 text-xl font-bold text-black dark:text-white">
-                    <span class="material-icons-outlined text-3xl text-emerald-400">fitness_center</span>
+                    <span class="material-icons-outlined text-3xl text-orange-500">fitness_center</span>
                     Fitness Pro
                 </div>
                 <p class="text-gray-500 dark:text-gray-400 mt-2 max-w-sm">
@@ -489,24 +587,16 @@
         </div>
     </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="assets/js/animation.js"></script>
+    <script src="assets/js/utils.js"></script>
 </body>
 <script>
-    const toggle = document.getElementById('themeToggle');
-    const html = document.documentElement;
-    const themeIcon = document.getElementById('themeIcon');
 
-    // Default to dark mode
-    html.classList.add('dark');
-    toggle.checked = true;
-    themeIcon.textContent = 'dark_mode';
 
-    toggle.addEventListener('change', () => {
-        html.classList.toggle('dark');
-        const isDark = html.classList.contains('dark');
-
-        themeIcon.textContent = isDark ? 'dark_mode' : 'light_mode';
-    });
 </script>
+
 
 
 </html>
