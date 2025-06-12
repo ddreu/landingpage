@@ -360,31 +360,31 @@ gsap.from(".contact-button", {
 });
 // download app
 
-// gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger);
 
-// gsap.from(".download-text", {
-//   scrollTrigger: {
-//     trigger: "#download-app",
-//     start: "top 80%",
-//     toggleActions: "play none none reverse",
-//   },
-//   opacity: 0,
-//   x: -50,
-//   duration: 1,
-//   ease: "power2.out",
-// });
+gsap.from(".download-text", {
+  scrollTrigger: {
+    trigger: "#download-app",
+    start: "top 80%",
+    toggleActions: "play none none reverse",
+  },
+  opacity: 0,
+  x: -50,
+  duration: 1,
+  ease: "power2.out",
+});
 
-// gsap.from(".download-image", {
-//   scrollTrigger: {
-//     trigger: "#download-app",
-//     start: "top 80%",
-//     toggleActions: "play none none reverse",
-//   },
-//   opacity: 0,
-//   x: 50,
-//   duration: 1,
-//   ease: "power2.out",
-//   delay: 0.2,
-// });
+gsap.from(".download-image", {
+  scrollTrigger: {
+    trigger: "#download-app",
+    start: "top 80%",
+    toggleActions: "play none none reverse",
+  },
+  opacity: 0,
+  x: 50,
+  duration: 1,
+  ease: "power2.out",
+  delay: 0.2,
+});
 
 // wave bg
