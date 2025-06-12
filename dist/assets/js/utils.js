@@ -65,3 +65,10 @@ VANTA.TRUNK({
   scale: 1.0,
   scaleMobile: 1.0,
 });
+
+//responsive menu
+
+// Toggle mobile nav visibility
+document.getElementById("menu-toggle").addEventListener("click", () => {
+  document.getElementById("mobile-menu").classList.toggle("hidden");
+});

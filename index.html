@@ -19,6 +19,8 @@
     <!-- Header -->
     <header class="sticky top-0 z-50 backdrop-blur-sm bg-white/40 dark:bg-[#0f0f0f]/40">
         <div class="flex justify-between items-center max-w-7xl mx-auto px-8 py-6">
+
+            <!-- Logo -->
             <a href="index.html">
                 <div class="flex items-center gap-2 text-xl font-bold text-black dark:text-white cursor-pointer">
                     <span class="material-icons-outlined text-3xl text-orange-500">fitness_center</span>
@@ -26,9 +28,14 @@
                 </div>
             </a>
 
+            <!-- Hamburger Icon (Mobile Only) -->
+            <button id="menu-toggle" class="md:hidden text-black dark:text-white">
+                <span class="material-icons-outlined text-3xl">menu</span>
+            </button>
 
-
-            <nav class="space-x-6 hidden md:flex">
+            <!-- Nav Links -->
+            <nav id="mobile-menu"
+                class="hidden flex-col space-y-4 absolute top-full left-0 w-full bg-white dark:bg-[#1e1e1e] px-8 py-6 shadow-md md:shadow-none md:bg-transparent md:dark:bg-transparent md:static md:flex md:flex-row md:space-y-0 md:space-x-6 md:w-auto">
                 <a href="#next-section" class="text-black dark:text-gray-300 hover:text-orange-500">How it Works</a>
                 <a href="#features" class="text-black dark:text-gray-300 hover:text-orange-500">Features</a>
                 <a href="#pricing" class="text-black dark:text-gray-300 hover:text-orange-500">Plans</a>
@@ -38,7 +45,7 @@
                 <a href="#contact" class="text-black dark:text-gray-300 hover:text-orange-500">Contact</a>
             </nav>
 
-
+            <!-- Theme Toggle -->
             <div class="flex items-center gap-3">
                 <span class="text-black dark:text-gray-300 flex items-center gap-1">
                     <span id="themeIcon" class="material-icons-outlined text-base">dark_mode</span>
@@ -52,9 +59,7 @@
                     </div>
                 </label>
             </div>
-
         </div>
-
     </header>
     <!-- <img src="assets/images/hero-bg.png" alt="Fitness Image" class="w-full" /> -->
 
