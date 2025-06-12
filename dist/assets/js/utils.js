@@ -45,7 +45,7 @@ window.addEventListener("scroll", () => {
 
 window.addEventListener("scroll", () => {
   const scrollBtn = document.getElementById("scroll-down-btn");
-  const hideAt = 400;
+  const hideAt = 200;
 
   if (window.scrollY > hideAt) {
     scrollBtn.classList.add("opacity-0", "pointer-events-none");
