@@ -18,7 +18,7 @@
 <body class="bg-white text-gray-800 dark:bg-[#0f0f0f] dark:text-white">
     <!-- Header -->
     <header class="sticky top-0 z-50 backdrop-blur-sm bg-white/40 dark:bg-[#0f0f0f]/40">
-        <div class="flex justify-between items-center max-w-7xl mx-auto px-8 py-6">
+        <div class="flex justify-between items-center max-w-7xl mx-auto px-8 py-3">
 
             <!-- Logo -->
             <a href="index.html">
@@ -28,25 +28,29 @@
                 </div>
             </a>
 
-            <!-- Hamburger Icon (Mobile Only) -->
-            <button id="menu-toggle" class="md:hidden text-black dark:text-white">
-                <span class="material-icons-outlined text-3xl">menu</span>
-            </button>
+
 
             <!-- Nav Links -->
             <nav id="mobile-menu"
-                class="hidden flex-col space-y-4 absolute top-full left-0 w-full bg-white dark:bg-[#1e1e1e] px-8 py-6 shadow-md md:shadow-none md:bg-transparent md:dark:bg-transparent md:static md:flex md:flex-row md:space-y-0 md:space-x-6 md:w-auto">
-                <a href="#next-section" class="text-black dark:text-gray-300 hover:text-orange-500">How it Works</a>
-                <a href="#features" class="text-black dark:text-gray-300 hover:text-orange-500">Features</a>
-                <a href="#pricing" class="text-black dark:text-gray-300 hover:text-orange-500">Plans</a>
-                <a href="#faq" class="text-black dark:text-gray-300 hover:text-orange-500">FAQs</a>
-                <a href="#blog" class="text-black dark:text-gray-300 hover:text-orange-500">Blog</a>
-                <a href="#download-app" class="text-black dark:text-gray-300 hover:text-orange-500">Download</a>
-                <a href="#contact" class="text-black dark:text-gray-300 hover:text-orange-500">Contact</a>
+                class="hidden flex-col items-center text-center space-y-4 absolute top-full left-0 w-full bg-white dark:bg-[#1e1e1e] px-8 py-6 shadow-md md:shadow-none md:bg-transparent md:dark:bg-transparent md:static md:flex md:flex-row md:space-y-0 md:space-x-6 md:w-auto md:items-start md:text-left">
+
+                <ul class="flex flex-col items-center space-y-4 md:flex-row md:space-y-0 md:space-x-6 md:items-start">
+                    <li><a href="#next-section" class="text-black dark:text-gray-300 hover:text-orange-500">How it
+                            Works</a></li>
+                    <li><a href="#features" class="text-black dark:text-gray-300 hover:text-orange-500">Features</a>
+                    </li>
+                    <li><a href="#pricing" class="text-black dark:text-gray-300 hover:text-orange-500">Plans</a></li>
+                    <li><a href="#faq" class="text-black dark:text-gray-300 hover:text-orange-500">FAQs</a></li>
+                    <li><a href="#blog" class="text-black dark:text-gray-300 hover:text-orange-500">Blog</a></li>
+                    <li><a href="#download-app" class="text-black dark:text-gray-300 hover:text-orange-500">Download</a>
+                    </li>
+                    <li><a href="#contact" class="text-black dark:text-gray-300 hover:text-orange-500">Contact</a></li>
+                </ul>
             </nav>
 
+
             <!-- Theme Toggle -->
-            <div class="flex items-center gap-3">
+            <div class="flex items-center sm:gap-0 gap-3">
                 <span class="text-black dark:text-gray-300 flex items-center gap-1">
                     <span id="themeIcon" class="material-icons-outlined text-base">dark_mode</span>
                     Theme
@@ -59,7 +63,13 @@
                     </div>
                 </label>
             </div>
+            <!-- Hamburger Icon (Mobile Only) -->
+            <button id="menu-toggle" class="md:hidden text-black dark:text-white">
+                <span class="material-icons-outlined text-3xl">menu</span>
+            </button>
         </div>
+
+
     </header>
     <!-- <img src="assets/images/hero-bg.png" alt="Fitness Image" class="w-full" /> -->
 
@@ -72,9 +82,10 @@
             <img src="dist/assets/images/hero-bg-wave.png" alt="Wave Background" class="w-full object-cover" />
         </div> -->
         <div id="waveReveal"
-            class="absolute top-[65%] left-0 w-full -translate-y-[10%] z-0 pointer-events-none overflow-hidden">
+            class="absolute top-[65%] -translate-y-[10%] md:top-1/3 md:-translate-y-1/2 left-0 w-full z-0 pointer-events-none overflow-hidden">
             <img src="dist/assets/images/hero-bg-wave.png" alt="Wave Background" class="w-full object-cover" />
         </div>
+
 
 
         <div class="relative z-10 flex flex-col md:flex-row items-center justify-between max-w-7xl mx-auto">
@@ -127,12 +138,13 @@
 
         <!-- Scroll-down Button -->
         <div id="scroll-down-btn"
-            class="absolute bottom-12 left-1/2 transform -translate-x-1/2 hidden md:flex animate-bounce z-10">
+            class="absolute bottom-20 left-1/2 transform -translate-x-1/2 hidden md:flex animate-bounce z-10">
             <button onclick="document.getElementById('next-section').scrollIntoView({ behavior: 'smooth' });"
                 class="w-14 h-14 border-2 border-gray-400 dark:border-gray-600 rounded-full flex items-center justify-center text-gray-600 dark:text-gray-300 hover:text-orange-500 hover:border-orange-500 transition duration-300">
                 <span class="material-icons-outlined text-2xl">expand_more</span>
             </button>
         </div>
+
     </section>
 
 
@@ -250,7 +262,7 @@
 
     <!-- </section> -->
 
-    <section class="px-8 py-24 max-w-7xl mx-auto flex flex-col-reverse md:flex-row items-center mb-16 gap-12">
+    <section class="px-8 py-24 max-w-7xl mx-auto flex flex-col md:flex-row items-center mb-16 gap-12">
         <!-- Left Content -->
         <div class="md:w-1/2 space-y-6 text-center md:text-left reveal-text">
             <h2 class="text-3xl md:text-4xl font-extrabold leading-tight">
@@ -267,12 +279,13 @@
             </button>
         </div>
         <!-- Swiper Pagination on Top -->
-        <div class="flex flex-col items-end md:w-1/2">
+        <div class="flex flex-col items-center md:items-end w-full md:w-1/2 px-4 md:px-0">
+
             <!-- Dots outside the image -->
             <div class="swiper-pagination mb-4 !static"></div>
 
             <!-- Swiper Container -->
-            <div class="swiper w-full rounded-lg shadow-lg">
+            <div class="swiper w-full max-w-md md:max-w-full rounded-lg shadow-lg">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <img src="dist/assets/images/c3.jpg"
@@ -297,8 +310,10 @@
 
 
 
-    <section id="pricing" class="relative bg-gray-50 dark:bg-neutral-900 text-gray-900 dark:text-white px-8 py-32"
-        style="clip-path: polygon(0 6%, 100% 0%, 100% 94%, 0% 100%)">
+    <section id="pricing"
+        class="relative bg-gray-50 dark:bg-neutral-900 text-gray-900 dark:text-white px-8 pt-36 pb-40 md:pt-32 md:pb-32"
+        style="clip-path: polygon(0 3%, 100% 0%, 100% 97%, 0% 100%)">
+
 
         <!-- Section Title -->
         <div class="max-w-7xl mx-auto text-center mb-16 pricing-title">
@@ -694,6 +709,24 @@
     <script src="dist/assets/js/animation.js"></script>
     <script src="dist/assets/js/utils.js"></script>
     <script src="dist/assets/js/swiper.js"></script>
+    <script>
+        // Toggle mobile nav visibility
+        function initMobileMenuToggle() {
+            const toggle = document.getElementById("menu-toggle");
+            const menu = document.getElementById("mobile-menu");
+
+            if (toggle && menu) {
+                toggle.addEventListener("click", () => {
+                    menu.classList.toggle("hidden");
+                });
+            } else {
+                console.error("Menu toggle or mobile menu not found.");
+            }
+        }
+
+        // Call it immediately
+        initMobileMenuToggle();
+    </script>
 </body>
 
 </html>

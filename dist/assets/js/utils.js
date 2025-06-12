@@ -68,7 +68,19 @@ VANTA.TRUNK({
 
 //responsive menu
 
-// Toggle mobile nav visibility
-document.getElementById("menu-toggle").addEventListener("click", () => {
-  document.getElementById("mobile-menu").classList.toggle("hidden");
-});
+// // Toggle mobile nav visibility
+// function initMobileMenuToggle() {
+//   const toggle = document.getElementById("menu-toggle");
+//   const menu = document.getElementById("mobile-menu");
+
+//   if (toggle && menu) {
+//     toggle.addEventListener("click", () => {
+//       menu.classList.toggle("hidden");
+//     });
+//   } else {
+//     console.error("Menu toggle or mobile menu not found.");
+//   }
+// }
+
+// // Call it immediately
+// initMobileMenuToggle();
