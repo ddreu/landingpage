@@ -358,3 +358,33 @@ gsap.from(".contact-button", {
   delay: 0.4,
   ease: "back.out(1.7)",
 });
+// download app
+
+// gsap.registerPlugin(ScrollTrigger);
+
+// gsap.from(".download-text", {
+//   scrollTrigger: {
+//     trigger: "#download-app",
+//     start: "top 80%",
+//     toggleActions: "play none none reverse",
+//   },
+//   opacity: 0,
+//   x: -50,
+//   duration: 1,
+//   ease: "power2.out",
+// });
+
+// gsap.from(".download-image", {
+//   scrollTrigger: {
+//     trigger: "#download-app",
+//     start: "top 80%",
+//     toggleActions: "play none none reverse",
+//   },
+//   opacity: 0,
+//   x: 50,
+//   duration: 1,
+//   ease: "power2.out",
+//   delay: 0.2,
+// });
+
+// wave bg
